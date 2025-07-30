@@ -72,7 +72,7 @@
 
     <!-- Coupon Form -->
     <div class="mt-6">
-        <h2 class="text-gray-800 text-xl font-semibold mb-2">Apply a coupon:</h2>
+        <h2 class="text-gray-800 text-xl font-semibold mb-2">Apply Points:</h2>
         <form action="{% url 'coupons:apply' %}" method="post" class="flex flex-col items-start sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0 space-y-2">
             {% csrf_token %}
             {{ coupon_apply_form }}

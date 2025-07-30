@@ -45,7 +45,8 @@
     </style>
 </head>
 <body>
-    <h1>My Shop</h1>
+    <h1>My Shop 1</h1><br>
+    <h4>Articial Intelligence Alliance Agriculture(NGO)</h4>
     <p>
         Invoice no. {{ order.id }}<br>
         <span class="secondary">
@@ -71,7 +72,7 @@
         </thead>
         <tbody>
             {% for item in order.items.all %}
-            <tr class="row{% cycle "1" "2" %}">
+            <tr >
                 <td>{{ item.product.name }}</td>
                 <td class="num">${{ item.price }}</td>
                 <td class="num">{{ item.quantity }}</td>
@@ -85,7 +86,7 @@
         </tbody>
     </table>
 
-    <span class="{% if order.paid %}paid{% else %}pending{% endif %}">
+    <span>
         {% if order.paid %}Paid{% else %}Pending payment{% endif %}
     </span>
 </body>
